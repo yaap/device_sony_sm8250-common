@@ -347,6 +347,10 @@ TARGET_COMMON_QTI_COMPONENTS := \
     alarm \
     av
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio-service.compat
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal
