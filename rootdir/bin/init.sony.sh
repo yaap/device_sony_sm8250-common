@@ -4,9 +4,9 @@ model=`grep -aim1 'model:' /dev/block/by-name/LTALabel | sed -e 's/^.*model:[ ]*
 
 case "$model" in
     "XQ-AT42" | "XQ-AT52" | "XQ-AT72" | "XQ-AS42" | "XQ-AS52" | "XQ-AS62" | "XQ-AS72" )
-        setprop vendor.radio.multisim.config dsds;;
+        setprop vendor.radio.hardware.sku ds;;
     * )
-        setprop vendor.radio.multisim.config ssss;;
+        setprop vendor.radio.hardware.sku ss;;
 esac
 
 # If the model string is empty, it must be a ss JP model
