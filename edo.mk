@@ -263,6 +263,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     $(LOCAL_PATH)/configs/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf
 
+# Graphics
+$(call soong_config_set,EGL,USE_DISPLAY_ARRAY,true)
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
